@@ -54,9 +54,7 @@ class _SignInScreenState extends State<SignInScreen> {
             height: 20,
           ),
           DefaultFloatingButton(
-            onPressed: () {
-              Navigator.pushNamed(context, signUpRoute);
-            },
+            onPressed: () {},
             buttonLabel: const Text("Sign In", style: TextStyle(fontSize: 18)),
           ),
           const SizedBox(
@@ -79,7 +77,9 @@ class _SignInScreenState extends State<SignInScreen> {
                 style: TextStyle(fontSize: 17),
               ),
               TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, signUpRoute);
+                  },
                   child: const Text(
                     "sign up now.",
                     style: TextStyle(fontSize: 17),
