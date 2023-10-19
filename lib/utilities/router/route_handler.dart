@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:noteapp50/view/screens/signin.dart';
 import 'package:noteapp50/view/screens/signup.dart';
 import 'package:noteapp50/utilities/router/routes.dart';
+import 'package:noteapp50/view/screens/splash.dart';
 
 class RouterHandler {
   static Route<dynamic> generateRoute (RouteSettings settings) {
     
     switch (settings.name) {
+      case splashRoute :
+        return MaterialPageRoute(builder: (_) => const SplashScreen());
       case signInRoute :
         return MaterialPageRoute(builder: (_) => const SignInScreen());
       case signUpRoute:

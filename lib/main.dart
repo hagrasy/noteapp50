@@ -16,7 +16,7 @@ class NoteApp50 extends StatelessWidget {
       child: MaterialApp(
         onGenerateRoute: RouterHandler.generateRoute,
         debugShowCheckedModeBanner: false,
-        initialRoute: signInRoute,
+        initialRoute: splashRoute,
       ),
     );
   }
