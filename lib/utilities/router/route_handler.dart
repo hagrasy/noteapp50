@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noteapp50/view/screens/onboarding.dart';
 import 'package:noteapp50/view/screens/signin.dart';
 import 'package:noteapp50/view/screens/signup.dart';
 import 'package:noteapp50/utilities/router/routes.dart';
@@ -8,6 +9,8 @@ class RouterHandler {
   static Route<dynamic> generateRoute (RouteSettings settings) {
     
     switch (settings.name) {
+      case onBoardingRoute :
+        return MaterialPageRoute(builder: (_) => const OnBoardingPage());
       case splashRoute :
         return MaterialPageRoute(builder: (_) => const SplashScreen());
       case signInRoute :

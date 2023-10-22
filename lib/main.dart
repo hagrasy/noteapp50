@@ -12,11 +12,12 @@ class NoteApp50 extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: MaterialApp(
+        theme: ThemeData(fontFamily: 'Poppins'),
         onGenerateRoute: RouterHandler.generateRoute,
         debugShowCheckedModeBanner: false,
-        initialRoute: splashRoute,
+        initialRoute: onBoardingRoute,
       ),
     );
   }
