@@ -28,11 +28,15 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  bloc: ^8.1.2
   cupertino_icons: ^1.0.2
-  firebase_core: ^2.18.0
+  firebase_auth: ^4.11.1
+  firebase_core: ^2.19.0
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.3
   font_awesome_flutter: ^10.6.0
+  meta: ^1.11.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -71,7 +75,5 @@ flutter:
         - asset: assets/fonts/Poppins-Bold.ttf
         - asset: assets/fonts/Poppins-Medium.ttf
         - asset: assets/fonts/Poppins-Regular.ttf
-
-  #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

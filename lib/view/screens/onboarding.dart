@@ -35,15 +35,45 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
             ),
           ),
           Container(
-              color: appBlue,
-              child: const Center(
-                  child: Text(
-                "Fast & Secured",
-                style: TextStyle(
-                  color: appWhite,
-                  fontSize: 50,
-                ),
-              )))
+              color: appWhite,
+              child: const Column(
+                children: [
+                  Spacer(),
+                  Image(image: AssetImage('assets/images/obFast.jpg')),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Center(
+                      child: Text(
+                    "Fast & Secured",
+                    style: TextStyle(
+                      color: appTextGrey,
+                      fontSize: 50,
+                    ),
+                  )),
+                  Spacer(),
+                ],
+              )),
+          Container(
+              color: appWhite,
+              child: const Column(
+                children: [
+                  Spacer(),
+                  Image(image: AssetImage('assets/images/obSecured.jpg')),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Center(
+                      child: Text(
+                    "Stored Safely",
+                    style: TextStyle(
+                      color: appTextGrey,
+                      fontSize: 50,
+                    ),
+                  )),
+                  Spacer(),
+                ],
+              ))
         ],
       ),
     );

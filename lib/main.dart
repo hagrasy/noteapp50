@@ -17,7 +17,7 @@ class NoteApp50 extends StatelessWidget {
         theme: ThemeData(fontFamily: 'Poppins'),
         onGenerateRoute: RouterHandler.generateRoute,
         debugShowCheckedModeBanner: false,
-        initialRoute: onBoardingRoute,
+        initialRoute: signInRoute,
       ),
     );
   }
