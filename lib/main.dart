@@ -1,8 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:noteapp50/firebase_options.dart';
 import 'package:noteapp50/utilities/router/routes.dart';
 import 'package:noteapp50/utilities/router/route_handler.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const NoteApp50());
 }
 

@@ -8,8 +8,10 @@ class DefaultTextFormField extends StatelessWidget {
     required this.label,
     required this.keyBoardType,
     required this.textIcon,
+    required this.controller,
   });
 
+  TextEditingController controller;
   Widget? textIcon;
   Widget? label;
   String? textHint;

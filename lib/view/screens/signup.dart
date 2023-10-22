@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noteapp50/auth/cubit/auth_cubit.dart';
 import 'package:noteapp50/utilities/constance/colors.dart';
 import 'package:noteapp50/view/widgets/default_button.dart';
 import 'package:noteapp50/view/widgets/default_password_field.dart';
@@ -14,6 +15,9 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   get passwordFieldKey => null;
+  var emailController = TextEditingController();
+  var nameController = TextEditingController();
+  var passController = TextEditingController();
 
   set password(String password) {}
 
@@ -38,14 +42,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
             textHint: 'Enter your first name',
             keyBoardType: TextInputType.name,
             textIcon: const Icon(Icons.person),
+            controller: nameController,
           ),
           DefaultTextFormField(
             label: const Text('Email Address'),
             textHint: 'Enter your email address',
             keyBoardType: TextInputType.emailAddress,
             textIcon: const Icon(Icons.email),
+            controller: emailController,
           ),
           PasswordField(
+            controller: passController,
             fieldKey: passwordFieldKey,
             helperText: 'No more than 8 characters.',
             labelText: 'Password *',
@@ -56,6 +63,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             },
           ),
           PasswordField(
+            controller: passController,
             fieldKey: passwordFieldKey,
             helperText: 'No more than 8 characters.',
             labelText: 'Password *',
@@ -69,7 +77,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
             height: 20,
           ),
           DefaultFloatingButton(
-            onPressed: () {},
+            onPressed: () {
+              AuthCubit.get(context).registerByEmailAndPassword(emailController.text, passController.text);
+            },
             buttonLabel: const Text("Sign Up", style: TextStyle(fontSize: 18)),
           ),
           const SizedBox(

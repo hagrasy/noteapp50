@@ -16,7 +16,8 @@ class _SignInScreenState extends State<SignInScreen> {
   get passwordFieldKey => null;
 
   set password(String password) {}
-
+  var emailController = TextEditingController();
+  var passController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,12 +35,14 @@ class _SignInScreenState extends State<SignInScreen> {
             height: 25,
           ),
           DefaultTextFormField(
+            controller: emailController,
             label: const Text('Email Address'),
             textHint: 'Enter your email address',
             keyBoardType: TextInputType.emailAddress,
             textIcon: const Icon(Icons.email),
           ),
           PasswordField(
+            controller: passController,
             fieldKey: passwordFieldKey,
             helperText: 'No more than 8 characters.',
             labelText: 'Password *',

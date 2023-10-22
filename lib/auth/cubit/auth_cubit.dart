@@ -8,7 +8,7 @@ part 'auth_state.dart';
 class AuthCubit extends Cubit<AuthState> {
   AuthCubit() : super(AuthInitial());
 
-  AuthCubit get(context) => BlocProvider.of(context);
+ static AuthCubit get(context) => BlocProvider.of(context);
 
   FirebaseAuth auth = FirebaseAuth.instance;
 

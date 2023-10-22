@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class PasswordField extends StatefulWidget {
-  const PasswordField({
+   PasswordField({
     super.key,
     this.fieldKey,
     this.hintText,
@@ -10,8 +10,10 @@ class PasswordField extends StatefulWidget {
     this.onSaved,
     this.validator,
     this.onFieldSubmitted,
+     required this.controller,
   });
 
+TextEditingController controller;
   final Key? fieldKey;
   final String? hintText;
   final String? labelText;

@@ -14,7 +14,7 @@ class RouterHandler {
       case splashRoute :
         return MaterialPageRoute(builder: (_) => const SplashScreen());
       case signInRoute :
-        return MaterialPageRoute(builder: (_) => const SignInScreen());
+        return MaterialPageRoute(builder: (_) => const   SignInScreen());
       case signUpRoute:
         return MaterialPageRoute(builder: (_) => const SignUpScreen());
 
