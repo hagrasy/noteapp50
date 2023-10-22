@@ -1,5 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:noteapp50/auth/cubit/auth_cubit.dart';
 import 'package:noteapp50/firebase_options.dart';
 import 'package:noteapp50/utilities/router/routes.dart';
 import 'package:noteapp50/utilities/router/route_handler.dart';
@@ -19,11 +21,16 @@ class NoteApp50 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: MaterialApp(
-        theme: ThemeData(fontFamily: 'Poppins'),
-        onGenerateRoute: RouterHandler.generateRoute,
-        debugShowCheckedModeBanner: false,
-        initialRoute: signInRoute,
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider(create: (_) => AuthCubit()),
+        ],
+        child: MaterialApp(
+          theme: ThemeData(fontFamily: 'Poppins'),
+          onGenerateRoute: RouterHandler.generateRoute,
+          debugShowCheckedModeBanner: false,
+          initialRoute: signInRoute,
+        ),
       ),
     );
   }
