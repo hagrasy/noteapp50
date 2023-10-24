@@ -1,9 +1,8 @@
-import 'package:bloc/bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:noteapp50/auth/cubit/auth_state.dart';
-import 'package:noteapp50/user_model.dart';
+import 'package:noteapp50/model/user_model.dart';
 
 class AuthCubit extends Cubit<AuthState> {
   AuthCubit() : super(AuthInitial());
